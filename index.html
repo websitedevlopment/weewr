@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Maths Game</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="start-game">
+            <h1>Welcome to PlayWithNumber.</h1>
+            <br>
+           
+            <input placeholder="Enter Name" id="name"  onblur="getVal()" required>
+            <p>Press the button below to start the game</p>
+            
+            
+            <a id="start-btn" onclick="restart()">     LET'S PLAY</a>
+            <center><p style="font-size: large; font-weight: 800; font-family:Verdana, Geneva, Tahoma, sans-serif;">Made By :-Anurag Garg</p></center>
+        </div>
+        <div id="in-game">
+            <div class="top-section">
+                <!-- <h1>Maths Game</h1> -->
+                <div class="game-data">
+                   <b> <p>Question :
+                        <span id="Qno">0</span>/10
+                    </p></b>
+                  <b>  <p>Score: <span id="score">0</span></p></b>
+                </div>
+                <div id="timer">
+                    <div id="progress"></div>
+                </div>
+            </div>
+            <div class="question-card">
+                <h1 id="question">This is question</h1>
+            </div>
+            <h3>Choose correct one: </h3>
+            <div class="answer-card">
+                <button>Option A</button>
+                <button>Option B</button>
+                <button>Option C</button>
+                <button>Option D</button>
+            </div>
+        </div>
+        <div id="end-game">
+           
+            <h1><p id="nap"> </p>Total Score is : <span id="final-score">0</span> / 1000</h1>
+            <p id="message"></p>
+            <a id="restart-btn" onclick="restart()">PLAY AGAIN</a>
+            <a id="restart-btn" onclick="clickCounter()" type="button">Score History</a>
+            <pre id="arrPrint" style="font-size: large; font-weight: 600;"></pre>
+            <center><p style="font-size: large; font-weight: 800; font-family:Verdana, Geneva, Tahoma, sans-serif;">Made By :-Anurag Garg</p></center>
+        </div>
+   
+       
+    </div>
+    <!-- <p><button onclick="clickCounter()" type="button">Click me!</button></p> -->
+
+<script>function getVal() {
+    const val = document.querySelector('input').value;
+    document.getElementById("nap").innerHTML = val;
+  }</script>
+
+<!-- <p style="font-size: large; font-weight: 800; font-family:Verdana, Geneva, Tahoma, sans-serif;">Made By :-Anurag Garg</p>    -->
+</body>
+
+</html>
